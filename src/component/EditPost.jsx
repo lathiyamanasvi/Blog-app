@@ -18,11 +18,14 @@ const EditPost = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <>
+        <h1 className='text-center text-white py-3'>Edit-Data</h1>
+        <form onSubmit={handleSubmit} className='bg-white p-5'>
       <input type="text" value={title} onChange={(e) => setTitle(e.target.value)} required />
       <textarea value={description} onChange={(e) => setDescription(e.target.value)} required />
       <button type="submit">Save Changes</button>
     </form>
+    </>
   );
 };
 

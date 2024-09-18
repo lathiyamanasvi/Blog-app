@@ -11,7 +11,7 @@ const PostDetails = () => {
         <>
             <h2 className='text-center text-white py-3'>Post-Details</h2>
             <div className="w-50 m-auto bg-white p-5">
-                <div style={{ backgroundColor: "#728FCE" }} className='text-center'>
+                <div style={{ backgroundColor: "#728FCE" }} className='text-center py-2 mb-3'>
                     <h2>{post?.name}</h2>
                 </div>
                 <div className='d-flex justiy-content-between'>
