@@ -1,0 +1,147 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: #000000;
+}
+
+h1, h2 {
+  color: #333;
+}
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+}
+
+form {
+  max-width: 600px;
+  margin: auto;
+}
+.container{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+  width: 1300px;
+}
+.card {
+  background-color: #000000;
+  border-radius: 10px;
+  box-shadow: 0 2px 20px rgba(255, 255, 255, 0.1);
+  width: 350px;
+  height: 100%;
+}
+.card-header img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding: 20px;
+  min-height: 250px;
+}
+.tag {
+  color: #2980b9;
+  font-size: 12px;
+  margin: 0;
+  padding: 2px 0px;
+  text-transform: uppercase;
+}
+
+.card-body h5 {
+  margin: 10px 0;
+  color:#fff;
+  font-size: 1em;
+}
+.card-body p {
+  font-size: 14px;
+  opacity: 0.8;
+  color: #fff;
+  margin: 0 0 50px 0;
+  font-weight: 500;
+}
+.user {
+  display: flex;
+  margin-top: auto;
+}
+.user img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+  object-fit: cover;
+}
+.user-info h5 {
+  margin: 0;
+}
+.user-info small {
+  color: #888785;
+}
+@media (max-width: 940px) {
+  .container {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+}
+.editbtn{
+  border-color: #2980b9;
+  color: #2980b9;
+  background-color: transparent;
+  width: 150px;
+}
+.deletebtn{
+  border-color: #ffffff;
+  color: #ffffff;
+  background-color: transparent;
+  width: 150px;
+}
+
+.addbtn{
+  width: 20%;
+  position: relative;
+  height: 3.5em;
+  border: 3px ridge #149CEA;
+  outline: none;
+  background-color: transparent;
+  color: white;
+  transition: 1s;
+  border-radius: 0.3em;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.addbtn::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 3%;
+  width: 95%;
+  height: 40%;
+  background-color: #000000;
+  transition: 0.5s;
+  transform-origin: center;
+}
+
+.addbtn::before {
+  content: "";
+  transform-origin: center;
+  position: absolute;
+  top: 80%;
+  left: 3%;
+  width: 95%;
+  height: 40%;
+  background-color: #000000;
+  transition: 0.5s;
+}
+
+.addbtn:hover::before, button:hover::after {
+  transform: scale(0)
+}
+
+.addbtn:hover {
+  box-shadow: inset 0px 0px 25px #1479EA;
+}
